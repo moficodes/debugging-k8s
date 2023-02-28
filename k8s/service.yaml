@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: debugging-k8s
+spec:
+  selector:
+    service: debugging-k8s
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 8000
